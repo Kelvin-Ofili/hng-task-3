@@ -1,0 +1,17 @@
+.position {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	align-items: center;
+	.input{
+		height: 30px;
+		width: 400px;
+		margin: 40px 0px;
+	}
+	.layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 10px;
+		margin: auto;
+	}
+}
