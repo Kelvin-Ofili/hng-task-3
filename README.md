@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Deployment
 
-Currently deployed at [https://hng-task-2-movie-site.vercel.app/](https://hng-task--3.vercel.app/)
+Currently deployed at [https://hng-task-3-picture-gallery.vercel.app/](https://hng-task--3.vercel.app/)
 
 ## Setup
 
