@@ -28,19 +28,6 @@ const PictureGallery = ({ images }) => {
 			sortedPictures.splice(over.id, 0, movedItem);
 			setPictures(sortedPictures);
 		}
-		// const updatedPictures = [...pictures];
-
-		// // Rearrange the pictures based on the drag-and-drop operation
-		// const [movedItem] = updatedPictures.splice(event, 1);
-		// updatedPictures.splice(event + 1, 0, movedItem);
-
-		// // Update the id property of each picture
-		// updatedPictures.forEach((picture, index) => {
-		// 	picture.id = index;
-		// });
-
-		// // Update the state with the new order and updated ids
-		// setPictures(updatedPictures);
 	};
 	return (
 		<div className={styles.position}>
