@@ -3,15 +3,46 @@
 	flex-direction: column;
 	width: 100vw;
 	align-items: center;
-	.input{
+	background-color: rgba(168, 71, 88, 0.623);
+	padding: 30px 0px;
+	.input {
 		height: 30px;
 		width: 400px;
-		margin: 40px 0px;
+		margin-bottom: 40px;
+		border-radius: 10px;
+		background-color: rgba(20, 53, 53, 0.864);
+		color: white;
+		padding: 5px 15px;
+	
 	}
 	.layout {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		gap: 40px;
-		margin: auto;
+		padding: 0px 14px;
+		// margin: auto;
+	}
+}
+@media (max-width: 1400px) {
+	.position {
+		.layout {
+			grid-template-columns: 1fr 1fr;
+			gap: 20px;
+		}
+	}
+}
+@media (max-width: 930px) {
+	.position {
+		.layout {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+	}
+}
+@media (max-width: 480px) {
+	.position {
+		.input {
+			width: 85%;
+		}
 	}
 }

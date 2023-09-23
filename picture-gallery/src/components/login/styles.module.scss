@@ -1,15 +1,22 @@
-.form {
+.everything{
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	height: 100vh;
 	background-color: rgba(168, 71, 88, 0.623);
+}
+.form {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
 	input {
 		margin: 7px 0px;
 		width: 400px;
-		padding: 10px;
-        border-radius: 15px;
+		padding: 15px;
+		border-radius: 15px;
+		background-color: rgba(20, 53, 53, 0.864);
 	}
 	button {
 		padding: 6px 30px;
@@ -17,18 +24,20 @@
 		background-color: aqua;
 		border-radius: 10px;
 		border: 1px solid gray;
+		color: black !important;
+		width: fit-content;
+		margin-top: 10px;
+		transition: 1s;
+		&:hover {
+			background-color: rgba(3, 19, 19, 0.864);
+			color: white !important;
+			transition: 1s;
+		}
 	}
 }
 
-.signin {
-	display: flex;
-	align-items: center;
-	margin-top: 30px;
-	button {
-		padding: 6px 30px;
-		margin-left: 10px;
-		background-color: aqua;
-		border-radius: 10px;
-		border: 1px solid gray;
+@media (max-width: 450px) {
+	input {
+		width: 85% !important;
 	}
 }

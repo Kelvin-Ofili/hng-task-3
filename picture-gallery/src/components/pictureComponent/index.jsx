@@ -18,7 +18,7 @@ const PictureComponent = ({ picture }) => {
 
 	return (
 		<div className={`${style} ${styles.card}`} ref={setNodeRef} {...attributes} {...listeners}>
-			{/* <div> */}
+		
 				<img src={picture.image} alt="" className={styles.image} />
 				<h1>{picture.name}</h1>
 				<div className={styles.tagsContainer}>
@@ -28,7 +28,7 @@ const PictureComponent = ({ picture }) => {
 						</div>
 					))}
 				</div>
-			{/* </div> */}
+		
 		</div>
 	);
 };

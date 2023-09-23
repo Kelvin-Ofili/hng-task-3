@@ -2,8 +2,9 @@ import { auth, db } from "../../firebaseConfig";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 import { useState } from "react";
-import styles from "./styles.module.scss"
+import styles from "./styles.module.scss";
 import { useNavigate } from "react-router-dom";
+import { Heading } from "../heading";
 const SignUpForm = () => {
 	const [userName, setUserName] = useState("");
 	const [email, setEmail] = useState("");
@@ -32,36 +33,39 @@ const SignUpForm = () => {
 		}
 	};
 	return (
-		<form className={styles.form}>
-			<input
-				type="email"
-				placeholder="Email"
-				value={email}
-				onChange={(e) => setEmail(e.target.value)}
-				className={styles.email}
-			/>
-			<input
-				type="name"
-				placeholder="username"
-				value={userName}
-				onChange={(e) => setUserName(e.target.value)}
-				className={styles.username}
-			/>
-			<input
-				type="password"
-				placeholder="Password"
-				value={password}
-				onChange={(e) => setPassword(e.target.value)}
-				className={styles.password}
-			/>
-			<button type="button" onClick={handleSignUp}>
-				Sign Up
-			</button>
-			<div className={styles.signin}>
-				<p>Already have an account?</p>
-				<button onClick={() => navigate("/login")}>Sign in</button>
-			</div>
-		</form>
+		<div className={styles.everything}>
+			<Heading />
+			<form className={styles.form}>
+				<input
+					type="email"
+					placeholder="Email"
+					value={email}
+					onChange={(e) => setEmail(e.target.value)}
+					className={styles.email}
+				/>
+				<input
+					type="name"
+					placeholder="username"
+					value={userName}
+					onChange={(e) => setUserName(e.target.value)}
+					className={styles.username}
+				/>
+				<input
+					type="password"
+					placeholder="Password"
+					value={password}
+					onChange={(e) => setPassword(e.target.value)}
+					className={styles.password}
+				/>
+				<button type="button" onClick={handleSignUp} className={styles.signUp}>
+					Sign Up
+				</button>
+				<div className={styles.signin}>
+					<p>Already have an account?</p>
+					<button onClick={() => navigate("/login")}>Sign in</button>
+				</div>
+			</form>
+		</div>
 	);
 };
 

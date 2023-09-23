@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import { PictureComponent } from "../pictureComponent";
 import { DndContext, closestCenter } from "@dnd-kit/core";
 import { rectSortingStrategy, SortableContext } from "@dnd-kit/sortable";
+import { Heading } from "../heading";
 
 const PictureGallery = ({ images }) => {
 	const [value, setValue] = useState("");
@@ -31,6 +32,7 @@ const PictureGallery = ({ images }) => {
 	};
 	return (
 		<div className={styles.position}>
+			<Heading />
 			<input
 				type="text"
 				onChange={handleSearch}
